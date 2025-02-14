@@ -32,7 +32,7 @@ const AnimeCard = ({title = '', cover = '', episodes = 0, description = ''}) => 
     <CardBody>
       <div className='flex gap-4'>
         <div className='h-64 w-40 min-w-40 overflow-hidden rounded-lg'>
-          <img
+          <Image
             alt="Image Cover" 
             className="h-full object-cover" 
             src={cover} />

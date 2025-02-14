@@ -24,9 +24,10 @@ const App = () => {
             </div>
             <Spacer y={4} />
             <div className="text-center">
-              <div className="text-lg">
-                This Page is made with NextJs. Why I Use NextJs instead of Laravel ? I just want to show that
-                I can also learn new things. This Page is my first time using NextJs. I'm still learning. :)
+              <div className="text-lg">{
+                `This Page is made with NextJs. Why I Use NextJs instead of Laravel ? I just want to show that
+                I can also learn new things. This Page is my first time using NextJs. I'm still learning. :)`
+                }
               </div>
             </div>
           </CardBody>

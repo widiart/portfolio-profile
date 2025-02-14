@@ -7,12 +7,13 @@ import Stack from '@/components/Stack'
 import Skill from '@/components/Skill'
 import Project from '@/components/Project'
 import {Spacer} from "@nextui-org/react";
+import { RefObject } from 'react';
 
 
 export default function Home() {
   const sections = [About, Stack, Skill, Project];
   
-  const scrollToSection = (ref) => {
+  const scrollToSection = (ref: RefObject<HTMLElement>) => {
     if (ref.current) {
       ref.current.scrollIntoView({ behavior: 'smooth' });
     }
