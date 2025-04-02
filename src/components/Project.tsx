@@ -12,12 +12,12 @@ const App = () => {
 
   return (
     <div className='flex justify-center w-full mt-3' id='project'>
-      <div className='w-[1024px]'>
+      <div className='md:w-[1024px] w-full'>
         <Card className="w-full border-none bg-[#B3C8CF] text-[#5C7285]" shadow='none'>
-          <CardBody className="p-0">
+          <CardBody className="md:p-0">
             <div className="text-5xl font-bold text-center">Project Participant</div>
             <Spacer y={8} />
-            <div className="grid grid-cols-2 justify-center gap-4">
+            <div className="grid md:grid-cols-2 grid-cols-1 justify-center gap-4">
               <Card 
                   onMouseEnter={() => setIsHoveredPDDIKTI(true)}
                   onMouseLeave={() => setIsHoveredPDDIKTI(false)}

@@ -166,15 +166,15 @@ const App = () => {
   if (loading) {
     return (
       <div>
-        <div className='grid grid-cols-2 gap-4'>
+        <div className='grid md:grid-cols-2 grid-cols-1 gap-4'>
           <BlankCard />
           <BlankCard />
         </div>
         <Spacer y={4} />
-        <div className='flex w-full justify-center gap-2'>
-          <Button className={`bg-cyan-700 text-cyan-100 ${currentPage == 1 && 'bg-[#F1F0E8] hover:bg-[#F1F0E8] text-cyan-700'}`} variant="solid" onClick={handlePrevPage} 
+        <div className='md:flex grid grid-cols-5 w-full justify-center gap-2'>
+          <Button className={`bg-cyan-700 hidden md:block text-cyan-100 ${currentPage == 1 && 'bg-[#F1F0E8] hover:bg-[#F1F0E8] text-cyan-700'}`} variant="solid" onClick={handlePrevPage} 
             disabled={currentPage == 1}>
-            Prev
+              Prev
           </Button>
           {
             [1,2,3,4,5,6,7,8,9,10].map(page => (
@@ -185,9 +185,9 @@ const App = () => {
               </Button>
             ))
           }
-          <Button className={`bg-cyan-700 text-cyan-100 ${currentPage == totalPages && 'bg-[#F1F0E8] hover:bg-[#F1F0E8] text-cyan-700'}`} variant="solid" onClick={handleNextPage} 
+          <Button className={`bg-cyan-700 hidden md:block text-cyan-100 ${currentPage == totalPages && 'bg-[#F1F0E8] hover:bg-[#F1F0E8] text-cyan-700'}`} variant="solid" onClick={handleNextPage} 
             disabled={currentPage == totalPages}>
-            Next
+              Next
           </Button>
         </div>
       </div>
@@ -196,7 +196,7 @@ const App = () => {
 
   return (
     <div>
-      <div className='grid grid-cols-2 gap-4'>
+      <div className='grid md:grid-cols-2 grid-cols-1 gap-4'>
         {
           animes.map(anime => (
             <AnimeCard 
@@ -210,23 +210,23 @@ const App = () => {
         }
       </div>
       <Spacer y={4} />
-      <div className='flex w-full justify-center gap-2'>
-        <Button className={`bg-cyan-700 text-cyan-100 ${currentPage == 1 && 'bg-[#F1F0E8] hover:bg-[#F1F0E8] text-cyan-700'}`} variant="solid" onClick={handlePrevPage} 
+      <div className='md:flex grid grid-cols-5 w-full justify-center items-center self-center gap-2'>
+        <Button className={`bg-cyan-700 hidden md:block text-cyan-100 ${currentPage == 1 && 'bg-[#F1F0E8] hover:bg-[#F1F0E8] text-cyan-700'}`} variant="solid" onClick={handlePrevPage} 
           disabled={currentPage == 1}>
-          Prev
+            Prev
         </Button>
         {
           [1,2,3,4,5,6,7,8,9,10].map(page => (
             <Button key={page} isIconOnly onClick={() => goToPage(page)}
-              className={`bg-cyan-700 text-cyan-100 ${currentPage == page && 'bg-[#F1F0E8] hover:bg-[#F1F0E8] text-cyan-700'}`} 
+              className={`bg-cyan-700 text-cyan-100 ${currentPage == page && 'bg-[#F1F0E8] hover:bg-[#F1F0E8] text-cyan-700 self-center flex'}`} 
               variant="solid" disabled={currentPage == page}>
               {page}
             </Button>
           ))
         }
-        <Button className={`bg-cyan-700 text-cyan-100 ${currentPage == totalPages && 'bg-[#F1F0E8] hover:bg-[#F1F0E8] text-cyan-700'}`} variant="solid" onClick={handleNextPage} 
+        <Button className={`bg-cyan-700 hidden md:block text-cyan-100 ${currentPage == totalPages && 'bg-[#F1F0E8] hover:bg-[#F1F0E8] text-cyan-700'}`} variant="solid" onClick={handleNextPage} 
           disabled={currentPage == totalPages}>
-          Next
+            Next
         </Button>
       </div>
     </div>

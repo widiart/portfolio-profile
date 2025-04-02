@@ -7,7 +7,7 @@ const App = () => {
       <div className='w-[1024px]'>
         <Card className="w-full border-none bg-[#89A8B2]" shadow='none'>
           <CardBody className="h-96 p-0">
-            <div className="absolute top-24 left-10">
+            <div className="absolute top-24 left-10 z-50">
               <p className="text-5xl text-[#F1F0E8]">{`Hi, I'M `}<span className="text-7xl font-semibold">Widiarto</span></p>
               <Spacer y={4} />
               <p className="text-4xl text-[#F1F0E8]">Fullstack Web Developer</p>
@@ -18,10 +18,9 @@ const App = () => {
                 </Button>
               </a>
             </div>
-            <div className="absolute bottom-0 right-0">
+            <div className="absolute bottom-0 right-0 z-10">
               <Image
-                alt="NextUI hero Image"
-                as={NextImage}
+                alt="Image Profile"
                 height={250}
                 src="/image/profile.png"
                 width={380}
